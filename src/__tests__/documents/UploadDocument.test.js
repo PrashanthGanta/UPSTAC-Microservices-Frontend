@@ -51,7 +51,7 @@ describe('Upload Document tests', () => {
         await mountedComponent.submitForm("form")
 
         await mountedComponent.reload();
-        mountedComponent.expectLocationToBe("/")
+        mountedComponent.expectLocationToBe("/upload-document/TESTER/21")
 
     });
     it('Uploading document without not agreeing conditions should throw error', async () => {

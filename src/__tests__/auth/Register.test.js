@@ -48,7 +48,7 @@ describe('Register User tests', () => {
         await mountedComponent.submitForm("form")
 
         await mountedComponent.reload();
-        mountedComponent.expectLocationToBe("/profile")
+        mountedComponent.expectLocationToBe("/")
 
     });
     it('Registering User without agreeing terms should throw error', async () => {
