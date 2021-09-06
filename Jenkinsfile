@@ -8,9 +8,6 @@ pipeline {
     environment {}
 
     stages {
-        stage{
-            git 'https://github.com/PrashanthGanta/UPSTAC-Microservices-Frontend.git'
-        }
         stage('Build') {
             steps{
                 echo "installing NPM Packages"
