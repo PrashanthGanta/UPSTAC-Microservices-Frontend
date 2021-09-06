@@ -6,12 +6,8 @@ pipeline {
             steps {
                 echo 'installing NPM Packages..'
                 sh 'npm install'
-            }
-            steps{
                 echo "NPM Update"
                 sh 'npm update'
-            }
-            steps{
                 echo "installing NPM Packages"
                 sh 'npm audit fix'
             }
