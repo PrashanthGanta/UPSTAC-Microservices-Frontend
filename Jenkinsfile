@@ -21,6 +21,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh "docker login -u gantaprashanth -p Prashanth@13041996"
+                sh "docker build -t vote-ci-jenkins ."
+                sh "docker tag vote-ci-jenkins gantaprashanth/vote-ci-jenkins"
+                sh "docker push gantaprashanth/vote-ci-jenkins:latest"
             }
         }
     }
