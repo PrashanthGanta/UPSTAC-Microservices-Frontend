@@ -14,21 +14,21 @@ pipeline {
         stage('Build') {
             steps{
                 echo "installing NPM Packages"
-                sh "npm install"
+                npm install
             }
             steps{
-                echo"NPM Update"
-                sh "npm update"
+                echo "NPM Update"
+                npm update
             }
             steps{
                 echo "installing NPM Packages"
-                sh "npm audit fix"
+                npm audit fix
             }
         }
         stage('Test'){
              steps{
                 echo "Run unit tests"
-                sh "npm run test"
+                npm run test
             }
         }
 
@@ -37,11 +37,11 @@ pipeline {
         }
 
         stage('Push Image to DockerHub') {
-            sh "Push Image to DockerHub"
+            echo "Push Image to DockerHub"
         }
 
         stage('Deploy in ECS') {
-            sh "Deploy in ECS"
+            echo "Deploy in ECS"
         }
     }
 
